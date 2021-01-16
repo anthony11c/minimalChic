@@ -195,8 +195,9 @@ div.o-nama, div.blog{
   height: auto;
   background-color: rgb(114, 35, 118);
   position: relative;
-  text-align: center;
   font-family: 'Nunito Sans', sans-serif;
+  justify-content: center;
+  align-items: center;
 }
 
 div.blog{
@@ -218,9 +219,9 @@ div.tekst-onama{
   height: 260px;
   position: absolute;
   top:10%;
-  left:50px;
   background-color: rgb(255, 245, 238, 0.7);
   padding:20px;
+  left: 100px;
   text-align: left;
   border-radius: 5px;
 }
@@ -357,8 +358,17 @@ div.footer{
     top:0px
   }
 
+  div.tekst-blog{
+    right: auto;
+    padding:18px;
+    top: auto;
+    height: 230px;
+  }
+
   div.tekst-onama{
-    left:30%;
+    left: auto;
+    top: auto;
+    height: 230px;
   }
 }
 
