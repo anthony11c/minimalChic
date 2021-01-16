@@ -284,7 +284,17 @@ p.copyright{
   height: 100px;
 }
 
+.linija{
+  visibility: hidden;
+}
+
 @media screen and (max-width: 770px) {
+
+  .linija.js{
+    visibility: visible;
+    margin-bottom: 10px;
+  }
+
   nav, ul {
     width: 100%;
   }
@@ -381,5 +391,10 @@ p.copyright{
   div.blog img{
     width: 100%;
   }
+
+  button:focus {
+    outline: none; 
+    
+}
 }
 

@@ -23,7 +23,7 @@
 
   <main role="main" class="container-fluid">
     <div class="navContainer">
-      <nav class="slide" id="myTopnav">
+      <nav class="slide" id="myTopnav"><hr class="linija">
         <ul>
           <li><a href="index.html" id="home" class="active">KOZMETIKA</a></li>
           <li><a href="#" id="about">BLOG</a></li>
@@ -96,6 +96,7 @@
           <p>SWIFT CODE: ESBCHR22</p>
           <p>+385 99 21 87 142</p>
           <p>info@minimalshik.com</p>
+          <p><i class="fab fa-facebook fa-2x" ></i><span>_____</span><i class="fab fa-instagram fa-2x"></i></p>
           <p class="copyright">@Copyright , created by Antonijo Ćosić, Tehničko Veleučiliste Zagreb</p>
       </div>
     </footer>
@@ -105,17 +106,20 @@
     const menuBtn = document.querySelector('.menu-btn');
     const nav = document.querySelector('.slide');
     const trazilica = document.querySelector('.trazilica');
+    const hr = document.querySelector('.linija');
     let menuOpen = false;
     menuBtn.addEventListener('click', ()=>{
       if(!menuOpen){
         menuBtn.classList.add('open');
         nav.classList.add('ham-open');
         trazilica.classList.add('respons-trazilica');
+        hr.classList.add('js');
         menuOpen = true;
       } else{
         menuBtn.classList.remove('open');
         nav.classList.remove('ham-open');
         trazilica.classList.remove('respons-trazilica');
+        hr.classList.remove('js');
         menuOpen = false;
       }
     });  
