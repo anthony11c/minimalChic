@@ -1,0 +1,350 @@
+*
+ {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+.container-fluid{
+  padding: 0;
+}
+
+html {
+  background-color: white;
+  line-height: 1.15;
+  font-size: 14px;
+}
+
+main{
+  background-color: white;
+}
+
+.navContainer{
+  width: 100%;
+  display: flex;
+  background-color: hsl(297, 54%, 30%);
+
+}
+
+nav {
+  position:relative;
+  margin: 0 auto;
+  z-index: 1;
+  left: -1;
+  display: block;
+  background-color: hsl(297, 54%, 30%);
+}
+
+ol,ul{
+  list-style: none;
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+}
+
+nav li{
+  display: inline-block;
+}
+
+nav a{
+  display: block;
+  color: #fff;
+  padding: 15px 3px;
+  margin-right: 12px;
+  margin-left: 12px;
+  font: 15px;
+  position: relative;
+}
+
+nav a::before{
+  content: '';
+  
+  height: 2px;
+  width: 0%;
+  background-color: #fff;
+
+  position: absolute;
+  top: 1px;
+  left: 0px;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+  width: 100%;
+}
+
+a.logo{
+  text-decoration: none;
+  width: 200px;
+  padding: 0;
+}
+
+img{
+  position: relative;
+  width: 100%;
+}
+
+a:link{
+  text-decoration: none;
+  color: white;
+}
+
+a:hover{
+  color: white;
+  border-radius: 5px;
+  background-color: hsl(297, 54%, 18%);
+}
+
+div.trazilica{
+  display: flex;
+  position: absolute;
+  right: 0px;
+  color: white;
+}
+
+.trazilicaLabel{
+  display: block;
+  position: absolute;
+  right: 5px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.trazilicaInput{
+  position:absolute;
+  right:5px;
+  top:20px;
+}
+
+section{
+  display: flex;
+  color: white;
+}
+
+section div.prva, div.druga{
+  position: relative;
+  background-color: hsl(297, 54%, 80%);
+  border-right: 5px solid white;
+  border-left: 5px solid white;
+  border-bottom: 10px solid white;
+  border-radius: 5px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+section p{
+  text-align: left;
+}
+
+.row{
+  margin: 0;
+}
+
+.button {
+  position: absolute;
+  bottom: 100px;
+  right: 7px;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+div.o-nama, div.blog{
+  width: 100%;
+  height: auto;
+  background-color: rgb(114, 35, 118);
+  position: relative;
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+div.blog{
+  margin-top: 10px;
+}
+
+div.o-nama img{
+width: 100%;
+position: relative;
+}
+
+div.blog img{
+  width: 50%;
+  position: relative; 
+}
+
+div.tekst-onama{
+  width: 300px;
+  height: 260px;
+  position: absolute;
+  top:10%;
+  left:50px;
+  background-color: rgb(255, 245, 238, 0.5);
+  padding:20px;
+  text-align: left;
+  border-radius: 5px;
+}
+
+div.tekst-blog{
+  width: 300px;
+  height: 260px;
+  position: absolute;
+  top:10%;
+  right:100px;
+  background-color: rgb(255, 245, 238, 0.5);
+  padding:20px;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.button.o-nama{
+  width: 120px;
+  left:12px;
+  bottom:0px;
+  margin-bottom: 20px;
+}
+
+footer{
+  height: 150px;
+  background-color: black;
+  width:100%;
+
+}
+
+div.footer{ 
+  text-align: center;
+  color: white;
+  padding-top:120px;
+}
+
+.menu-btn{
+  display:none;
+  visibility: hidden;
+  background-color: hsl(297, 54%, 30%);
+  border: none;
+}
+
+.menu-btn:hover{
+  background-color: hsl(297, 54%, 18%);
+}
+
+.hamburger .fas{
+  display: inline-block;
+  position:absolute;
+  top: 5px;
+  right: 10px;
+  height: 100px;
+}
+
+@media screen and (max-width: 770px) {
+  nav, ul {
+    width: 100%;
+  }
+
+  a.logo{
+    position: absolute;
+    left:-10px;
+    top: 0;
+    visibility: visible;
+  }  
+
+  .menu-btn{
+    display: inline-block;
+    visibility: visible;
+    border: none;
+  }
+
+  .menu-btn.open{
+    z-index: 0;
+    min-width: 80px;
+  }
+
+  .navContainer{
+    height: 100px;
+    list-style-type: none;
+    position: relative;
+    width: 100%;
+  }
+
+  nav{
+    visibility:hidden
+  }
+
+  .trazilica{
+    visibility: hidden;
+  }
+
+  .trazilica.respons-trazilica{
+    visibility: visible;
+    position: relative;
+  }
+
+  nav.slide.ham-open{
+    visibility: visible;
+    height: 230px;
+    margin-top: 100px;
+  }
+
+  nav.slide.ham-open ul li{
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav.slide.ham-open ul li a.logo{
+    position: absolute;
+    top:-100px;
+  }
+
+  nav.slide.ham-open ul li a:hover img{
+    transition: none;
+  }
+
+  div.tekst-blog{
+    left: 320px;
+  }
+
+  div.lice{
+    padding-bottom: 100px;
+  }
+
+  .button{
+    position: unset;
+  }
+
+  div.tekst-blog{
+    left: 200px;
+  }
+}
+
