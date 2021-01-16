@@ -53,6 +53,9 @@ nav a{
   margin-left: 12px;
   font: 15px;
   position: relative;
+  transition-property: background-color;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out ;
 }
 
 nav a::before{
@@ -66,7 +69,7 @@ nav a::before{
   top: 1px;
   left: 0px;
 
-  transition: all ease-in-out 250ms;
+  transition: all ease-in-out 500ms;
 }
 
 nav a:hover::before{
@@ -156,6 +159,10 @@ section p{
   margin: 5px;
 }
 
+.button:hover {
+  background-color: hsl(14, 76%, 35%);
+}
+
 .button span {
   cursor: pointer;
   display: inline-block;
@@ -174,11 +181,13 @@ section p{
 
 .button:hover span {
   padding-right: 25px;
+  
 }
 
 .button:hover span:after {
   opacity: 1;
   right: 0;
+  
 }
 
 div.o-nama, div.blog{
@@ -210,7 +219,7 @@ div.tekst-onama{
   position: absolute;
   top:10%;
   left:50px;
-  background-color: rgb(255, 245, 238, 0.5);
+  background-color: rgb(255, 245, 238, 0.7);
   padding:20px;
   text-align: left;
   border-radius: 5px;
@@ -222,7 +231,7 @@ div.tekst-blog{
   position: absolute;
   top:10%;
   right:100px;
-  background-color: rgb(255, 245, 238, 0.5);
+  background-color: rgb(255, 245, 238, 0.7);
   padding:20px;
   text-align: left;
   border-radius: 5px;
@@ -230,9 +239,9 @@ div.tekst-blog{
 
 .button.o-nama{
   width: 120px;
-  left:12px;
   bottom:0px;
   margin-bottom: 20px;
+  margin-right: 15px;
 }
 
 footer{
@@ -283,11 +292,18 @@ div.footer{
     display: inline-block;
     visibility: visible;
     border: none;
+    min-width: 80px;
   }
 
   .menu-btn.open{
     z-index: 0;
     min-width: 80px;
+    position: absolute;
+    right: 5px;
+  }
+
+  .menu-btn.open:hover{
+    background-color: hsl(297, 54%, 18%);
   }
 
   .navContainer{
@@ -307,7 +323,8 @@ div.footer{
 
   .trazilica.respons-trazilica{
     visibility: visible;
-    position: relative;
+    position: absolute;
+    right:80px;
   }
 
   nav.slide.ham-open{
@@ -331,20 +348,17 @@ div.footer{
     transition: none;
   }
 
-  div.tekst-blog{
-    left: 320px;
-  }
-
   div.lice{
     padding-bottom: 100px;
   }
 
   .button{
-    position: unset;
+    position: relative;
+    top:0px
   }
 
-  div.tekst-blog{
-    left: 200px;
+  div.tekst-onama{
+    left:30%;
   }
 }
 
