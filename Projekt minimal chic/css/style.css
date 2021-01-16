@@ -246,7 +246,7 @@ div.tekst-blog{
 }
 
 footer{
-  height: 150px;
+  height: auto;
   background-color: black;
   width:100%;
 
@@ -254,8 +254,15 @@ footer{
 
 div.footer{ 
   text-align: center;
-  color: white;
-  padding-top:120px;
+  color: #fff;
+  padding-top:60px;
+  justify-content: center;
+  align-items: center;
+}
+
+p.copyright{
+  color:#f4511e;
+  padding-top: 30px;
 }
 
 .menu-btn{
@@ -369,6 +376,10 @@ div.footer{
     left: auto;
     top: auto;
     height: 230px;
+  }
+
+  div.blog img{
+    width: 100%;
   }
 }
 
