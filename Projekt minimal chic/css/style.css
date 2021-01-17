@@ -12,7 +12,7 @@
 html {
   background-color: white;
   line-height: 1.15;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 main{
@@ -37,7 +37,7 @@ nav {
 
 ol,ul{
   list-style: none;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 0.1rem;
 }
 
@@ -111,12 +111,13 @@ div.trazilica{
   right: 5px;
   font-weight: 400;
   text-transform: uppercase;
+  top: 20px;
 }
 
 .trazilicaInput{
   position:absolute;
   right:5px;
-  top:20px;
+  top:40px;
 }
 
 section{
@@ -127,10 +128,6 @@ section{
 section div.prva, div.druga{
   position: relative;
   background-color: hsl(297, 54%, 80%);
-  border-right: 5px solid white;
-  border-left: 5px solid white;
-  border-bottom: 10px solid white;
-  border-radius: 5px;
   font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -142,10 +139,10 @@ section p{
   margin: 0;
 }
 
-.button {
+button.proizvodi {
   position: absolute;
   bottom: 100px;
-  right: 7px;
+  right: 0px;
   border-radius: 4px;
   background-color: #f4511e;
   border: none;
@@ -157,6 +154,19 @@ section p{
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -224,11 +234,12 @@ div.tekst-onama{
   left: 100px;
   text-align: left;
   border-radius: 5px;
+  font-weight: 800;
 }
 
 div.tekst-blog{
-  width: 300px;
-  height: 260px;
+  max-width: 500px;
+  min-width: 300px;
   position: absolute;
   top:10%;
   right:100px;
@@ -236,6 +247,8 @@ div.tekst-blog{
   padding:20px;
   text-align: left;
   border-radius: 5px;
+  font-weight: 800;
+
 }
 
 .button.o-nama{
@@ -272,9 +285,9 @@ p.copyright{
   border: none;
 }
 
-.menu-btn:hover{
+/* .menu-btn:hover{
   background-color: hsl(297, 54%, 18%);
-}
+} */
 
 .hamburger .fas{
   display: inline-block;
@@ -288,7 +301,27 @@ p.copyright{
   visibility: hidden;
 }
 
-@media screen and (max-width: 770px) {
+.proizvodi-lice, .proizvodi-tijelo{
+  background-color: hsl(297, 54%, 18%);
+  border-radius:0 0 5px 5px;
+  margin-bottom: 30px;
+}
+
+h2{
+  margin-top: 20px;
+  border-bottom: 5px solid #f4511e;
+  display: inline-block;
+}
+
+@media screen and (max-width: 1199px) {
+  button.proizvodi{
+    position: unset;
+    margin:0;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
 
   .linija.js{
     visibility: visible;
@@ -306,8 +339,12 @@ p.copyright{
     visibility: visible;
   }  
 
+  a.logo img{
+    height: 100px;
+  }
+
   .menu-btn{
-    display: inline-block;
+    display: flex;
     visibility: visible;
     border: none;
     min-width: 80px;
@@ -317,12 +354,12 @@ p.copyright{
     z-index: 0;
     min-width: 80px;
     position: absolute;
-    right: 5px;
+    right: 0px;
   }
 
-  .menu-btn.open:hover{
+  /* .menu-btn.open:hover{
     background-color: hsl(297, 54%, 18%);
-  }
+  } */
 
   .navContainer{
     height: 100px;
@@ -347,7 +384,7 @@ p.copyright{
 
   nav.slide.ham-open{
     visibility: visible;
-    height: 230px;
+    height: 250px;
     margin-top: 100px;
   }
 
@@ -370,7 +407,7 @@ p.copyright{
     padding-bottom: 100px;
   }
 
-  .button{
+  .button-proizvodi{
     position: relative;
     top:0px
   }
@@ -379,13 +416,12 @@ p.copyright{
     right: auto;
     padding:18px;
     top: auto;
-    height: 230px;
   }
 
   div.tekst-onama{
     left: auto;
     top: auto;
-    height: 230px;
+    height: 280px;
   }
 
   div.blog img{
