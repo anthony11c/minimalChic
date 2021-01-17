@@ -16,7 +16,7 @@ html {
 }
 
 main{
-  background-color: white;
+   background-color: hsl(297, 54%, 80%);;
 }
 
 .navContainer{
@@ -82,10 +82,6 @@ a.logo{
   padding: 0;
 }
 
-img{
-  position: relative;
-  width: 100%;
-}
 
 a:link{
   text-decoration: none;
@@ -93,7 +89,7 @@ a:link{
 }
 
 a:hover{
-  color: #fff;
+  color: white;
   border-radius: 5px;
   background-color: hsl(297, 54%, 18%);
 }
@@ -118,45 +114,12 @@ div.trazilica{
   position:absolute;
   right:5px;
   top:40px;
-  border-radius: 7px;
-  border: 2px solid #f4511e;
-}
-
-section{
-  display: flex;
-  color: white;
-}
-
-section div.prva, div.druga{
-  position: relative;
-  background-color: hsl(297, 54%, 80%);
-  font-family: 'Nunito Sans', sans-serif;
-}
-
-section p{
-  text-align: left;
 }
 
 .row{
   margin: 0;
 }
 
-button.proizvodi {
-  position: absolute;
-  bottom: 100px;
-  right: 0px;
-  border-radius: 4px;
-  background-color: #f4511e;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 17px;
-  padding: 10px;
-  width: 100px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
 
 .button {
   border-radius: 4px;
@@ -174,6 +137,11 @@ button.proizvodi {
 .button:hover {
   background-color: hsl(14, 76%, 35%);
 }
+
+img{
+    position: relative;
+    width: 100%;
+  }
 
 .button span {
   cursor: pointer;
@@ -202,64 +170,6 @@ button.proizvodi {
   
 }
 
-div.o-nama, div.blog{
-  width: 100%;
-  height: auto;
-  background-color: rgb(114, 35, 118);
-  position: relative;
-  font-family: 'Nunito Sans', sans-serif;
-  justify-content: center;
-  align-items: center;
-}
-
-div.blog{
-  margin-top: 10px;
-}
-
-div.o-nama img{
-width: 100%;
-position: relative;
-}
-
-div.blog img{
-  width: 50%;
-  position: relative; 
-}
-
-div.tekst-onama{
-  width: 300px;
-  height: 260px;
-  position: absolute;
-  top:10%;
-  background-color: rgb(255, 245, 238, 0.7);
-  padding:20px;
-  left: 100px;
-  text-align: left;
-  border-radius: 5px;
-  font-weight: 800;
-}
-
-div.tekst-blog{
-  max-width: 500px;
-  min-width: 300px;
-  position: absolute;
-  top:10%;
-  right:100px;
-  background-color: rgb(255, 245, 238, 0.7);
-  padding:20px;
-  text-align: left;
-  border-radius: 5px;
-  font-weight: 800;
-
-}
-
-.button.o-nama{
-  width: 120px;
-  bottom:0px;
-  margin-bottom: 20px;
-  margin-right: 15px;
-}
-
 footer{
   height: auto;
   background-color: black;
@@ -278,7 +188,6 @@ div.footer{
 p.copyright{
   color:#f4511e;
   padding-top: 30px;
-  margin-bottom: 0;
 }
 
 .menu-btn{
@@ -287,10 +196,6 @@ p.copyright{
   background-color: hsl(297, 54%, 30%);
   border: none;
 }
-
-/* .menu-btn:hover{
-  background-color: hsl(297, 54%, 18%);
-} */
 
 .hamburger .fas{
   display: inline-block;
@@ -304,18 +209,45 @@ p.copyright{
   visibility: hidden;
 }
 
-.proizvodi-lice, .proizvodi-tijelo{
-  background-color: hsl(297, 54%, 18%);
-  border-radius:0 0 5px 5px;
-  margin-bottom: 30px;
-}
-
 h2{
-  margin-top: 20px;
+  margin-top: 100px;
   border-bottom: 5px solid #f4511e;
   display: inline-block;
+  color: #fff;
 }
 
+section.kontakt-forma{
+    background-color: hsl(297, 54%, 18%);
+    border-radius:0 0 5px 5px;
+}
+
+form{
+    width: 100%;
+}
+
+form input{
+    width: 80%;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    border: 1px solid #f4511e;
+}
+textarea{
+    min-width: 100%;
+    max-width: 100%;
+    margin-bottom: 100px;
+    border-radius: 7px;
+    border: 1px solid #f4511e;
+}
+
+.col-no-padding {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+label{
+    color: #fff;
+}
 @media screen and (max-width: 1199px) {
   button.proizvodi{
     position: unset;
@@ -325,6 +257,10 @@ h2{
 }
 
 @media screen and (max-width: 767px) {
+
+    .duljina-input-small input{
+        width:100%;
+    }
 
   .linija.js{
     visibility: visible;
