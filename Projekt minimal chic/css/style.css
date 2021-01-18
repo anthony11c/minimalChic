@@ -437,7 +437,14 @@ h2{
 
   button:focus {
     outline: none; 
-    
-}
+  }
+
+  .trazilicaLabel{
+    top: 18px;
+  }
+  
+  .trazilicaInput{
+    top:48px;
+  }
 }
 
