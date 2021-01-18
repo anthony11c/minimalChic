@@ -107,13 +107,18 @@ div.trazilica{
   right: 5px;
   font-weight: 400;
   text-transform: uppercase;
-  top: 20px;
+  top: 30px;
+  color: #fff;
+  z-index:0;
 }
 
 .trazilicaInput{
   position:absolute;
   right:5px;
-  top:40px;
+  top:60px;
+  border-radius: 3px;
+  border: 2px solid black;
+  z-index: 1;
 }
 
 .row{
@@ -132,6 +137,7 @@ div.trazilica{
   width: 100px;
   transition: all 0.5s;
   cursor: pointer;
+  margin-bottom: 60px;
 }
 
 .button:hover {
@@ -188,6 +194,7 @@ div.footer{
 p.copyright{
   color:#f4511e;
   padding-top: 30px;
+  margin-bottom: 0;
 }
 
 .menu-btn{
@@ -234,7 +241,7 @@ form input{
 textarea{
     min-width: 100%;
     max-width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     border-radius: 7px;
     border: 1px solid #f4511e;
 }
